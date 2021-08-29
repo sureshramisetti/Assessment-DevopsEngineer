@@ -2,7 +2,6 @@
 
 # lambda-cfn
 
-[![Build Status](https://travis-ci.org/mapbox/lambda-cfn.svg?branch=master)](https://travis-ci.org/mapbox/lambda-cfn) [![npm](https://img.shields.io/npm/v/@mapbox/lambda-cfn.svg)](https://www.npmjs.com/package/@mapbox/lambda-cfn)
 
 Quickly create, deploy, and manage AWS Lambda functions via AWS CloudFormation.
 
@@ -10,11 +9,11 @@ Quickly create, deploy, and manage AWS Lambda functions via AWS CloudFormation.
 
 ### Node.js
 
-Lambda-cfn (or "Lambda CloudFormation") is a Node.js project that runs on AWS Lambda. Node.js v10.x is the current default, Node.js v8.10 is also available. See [AWS Lambda execution environment](http://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html) for more information about the Lambda Node.js runtime environment.
+Lambda-cfn (or "Lambda CloudFormation") is a Node.js project that runs on AWS Lambda. Node.js v10.x is the current default, Node.js v8.10 is also available.  
 
 ### S3 buckets
 
-Lambda-cfn uses [cfn-config](https://github.com/mapbox/cfn-config) behind the scenes to create and manage CloudFormation stacks. Cfn-config requires two S3 buckets - a config bucket and a template bucket - to work.
+Lambda-cfn uses behind the scenes to create and manage CloudFormation stacks. Cfn-config requires two S3 buckets - a config bucket and a template bucket - to work.
 
 Lambda-cfn will look for the following buckets by default if you've set an `AWS_ACCOUNT_ID` environment variable:
 
@@ -117,7 +116,7 @@ First we'll need to zip up the code for our Lambda function and then upload it t
 
 ### Use of cfn-config
 
-Lambda-cfn uses [cfn-config](https://github.com/mapbox/cfn-config) for creating, retrieving, updating, and deleting CloudFormation stacks. It takes the same parameters and values as cfn-config, see the [cfn-config CLI usage documentation](https://github.com/mapbox/cfn-config#cli-usage).
+Lambda-cfn uses  for creating, retrieving, updating, and deleting CloudFormation stacks. It takes the same parameters and values as cfn-config.
 
 Lambda-cfn will look for the following environment variables if you'd prefer to not pass in flags for each command:
 
@@ -214,9 +213,6 @@ Saving a CloudFormation stack allows you to reuse the parameter values for later
 lambda-cfn save dev
 ```
 
-## How do I contribute?
-
-We're happy you want to contribute! Check out [CONTRIBUTING.MD](CONTRIBUTING.MD) for more information.
 
 ## Utilities
 
@@ -226,7 +222,7 @@ We're happy you want to contribute! Check out [CONTRIBUTING.MD](CONTRIBUTING.MD)
 
 ## Dispatch Integration
 
-lambda-cfn now supports Mapbox's alert router [Dispatch](https://github.com/mapbox/dispatch) which provides integration service with Github, Slack, and PagerDuty on lambda-cfn version 3.0 or higher. By default, lambda-cfn will have an optional parameter for your dispatch stack SNS Topic ARN. If specified, lambda-cfn will grant the function permission to publish to that SNS Topic.
+lambda-cfn now supports Mapbox's alert router  which provides integration service with Github, Slack, and PagerDuty on lambda-cfn version 3.0 or higher. By default, lambda-cfn will have an optional parameter for your dispatch stack SNS Topic ARN. If specified, lambda-cfn will grant the function permission to publish to that SNS Topic.
 
 `lib/message.js` will route your message to Dispatch is `DispatchSnsArn` environment variable is set.
 
@@ -256,6 +252,4 @@ lambdaCfn.message(dispatchMessage, (err, res) => {
 
 ```
 
-## Questions?
 
-[Open new issue in this repo](https://github.com/mapbox/lambda-cfn/issues).

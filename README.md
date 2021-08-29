@@ -108,7 +108,7 @@ module.exports = lambdaCfn.build({
 });
 ```
 
-For a full list of available function properties to configure your Lambda function, see the [function specification documentation](FUNCTION-SPEC.md).
+
 
 ## Deploying Lambda functions to AWS
 

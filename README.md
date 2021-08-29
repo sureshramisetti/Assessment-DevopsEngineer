@@ -1,4 +1,4 @@
-:warning: DEPRECATED :warning:
+
 
 # lambda-cfn
 
